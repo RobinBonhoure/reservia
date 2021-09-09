@@ -1,0 +1,43 @@
+// SETUP
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+$bleu: #0065FC;
+$bleu-clair: #DEEBFF;
+$gris: #F2F2F2;
+
+.bleu {
+    color: $bleu;
+}
+
+.gris-bg {
+    background-color: $gris;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+// CLASSES SPECIFIQUES
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    &-title {
+        text-decoration: none;
+    }
+}
