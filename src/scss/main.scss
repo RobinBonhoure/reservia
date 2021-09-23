@@ -6,6 +6,10 @@
     font-family: "Raleway", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     // overflow-x: hidden;
@@ -74,6 +78,11 @@ h2 {
     }
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 // CLASSES SPECIFIQUES
 
 // NAV
@@ -99,6 +108,7 @@ h2 {
         align-items: center;
         height: 92px;
         &:before {
+            z-index: -1;
             content: "";
             position: absolute;
             left: 10px;
@@ -107,16 +117,47 @@ h2 {
             width: 50%;
             border-top: 4px solid $bleu;
         }
+        // &:hover .menu-sections:before {
+        //     left: unset!important;
+        //     right: 10px!important;
+        // }
         @media only screen and (max-width: 768px) {
             display: none;
         }
+        // .menu-title:last-child:hover .menu-sections:before {
+        //     right: 10px;
+        // }
     }
     &-sectionsPhone {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        border-bottom: solid $gris 4px;
+        &:before {
+            z-index: -2;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 100%;
+            width: 100%;
+            border-bottom: solid $gris 4px;
+        }
+        .menu-title {
+            width: 120px;
+            text-align: center;
+        }
+        &:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 100%;
+            width: 50%;
+            border-bottom: 4px solid $bleu;
+        }
         @media only screen and (min-width: 768px) {
             display: none;
         }
@@ -128,8 +169,6 @@ h2 {
         padding: 50px;
         @media only screen and (max-width: 768px) {
             padding: 20px 0 20px 0;
-            // padding-top: 20px;
-            // padding-bottom: 20px;
         }
         &_active {
             color: $bleu;
@@ -244,7 +283,8 @@ h2 {
             }
             &:hover .filtres-button-icon {
                 transition: all 0.1s ease-out;
-                font-size: 23px;
+                // font-size: 23px;
+                transform: scale(1.1);
             }
         }
         @media only screen and (max-width: 1000px) {
@@ -376,6 +416,9 @@ h2 {
             border-radius: 20px 0 0 20px;
             height: 100%;
         }
+        .description {
+            padding-left: 20px;
+        }
         @media only screen and (max-width: 768px) {
             width: 100%;
             margin-bottom: 1rem;
@@ -459,6 +502,7 @@ h2 {
                 font-size: 13px;
                 bottom: 17px;
                 margin-left: 13px;
+                margin-right: 13px;
             }
         }
         @media only screen and (max-width: 768px) {
