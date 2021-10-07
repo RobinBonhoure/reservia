@@ -194,7 +194,7 @@ a {
     margin-top: 40px;
     width: 100%;
     border: solid #f2f2f2 2px;
-    border-radius: 20px;
+    border-radius: 25px;
   }
 }
 .recherche-left {
@@ -206,6 +206,8 @@ a {
 }
 .recherche-input {
   border: solid #f2f2f2 2px;
+  border-left: none;
+  border-right: none;
   width: 230px;
   padding: 20px;
 }
